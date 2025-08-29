@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import warnings
+from datetime import datetime
 from my_crew.crew import MyCrew
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
@@ -15,7 +16,8 @@ def run():
     Run the crew.
     """
     inputs = {
-        "topic": "Premier League"
+        "topic": "Premier League",
+        "current_year": str(datetime.now().year)
     }
     
     try:
