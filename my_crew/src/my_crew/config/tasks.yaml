@@ -1,0 +1,19 @@
+data_collector_task:
+  description: >
+    Research the latest {topic} event and extract all 
+    data you need to create the league table of the season.
+  expected_output: >
+    A dictionary (json file) including all {topic} teams each team has list of data like 
+    number of matches, wins, lose, draw, goals
+  agent: data_collector
+
+data_analysis_task:
+  description: >
+    Give me report which including useful information 
+    by analysing the file from task before such as status of each team 
+  expected_output: >
+    A description table including status of each team 
+    and list of best teams and wrost teams 
+  agent: data_analyist
+  context:
+   - data_collector_task
