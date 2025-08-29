@@ -16,7 +16,7 @@ def run():
     """
     inputs = {
         "topic": "Premier League",
-         "current_year": str(datetime.now().year)
+        "current_year": str(datetime.now().year)
     }
     
     try:
